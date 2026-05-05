@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node src/index.js",
+    "server": "node --watch src/index.js",
     "migration:generate": "drizzle-kit generate",
     "migration:push": "drizzle-kit push",
     "migration:up": "drizzle-kit up"
@@ -13,11 +13,12 @@
   "author": "daniil husarenko",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^2.2.2",
     "drizzle-orm": "^0.41.0",
     "express": "4.21.2",
-    "pg": "^8.14.3"
+    "pg": "^8.20.0"
   },
   "devDependencies": {
-    "drizzle-kit": "^0.30.5"
+    "drizzle-kit": "^0.30.6"
   }
 }
