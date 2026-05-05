@@ -1,8 +1,8 @@
-import { sql } from 'drizzle-orm';
+const { sql } = require('drizzle-orm');
 
-import { integer, pgTable, serial, varchar, timestamp } from 'drizzle-orm/pg-core';
+const { integer, pgTable, serial, varchar, timestamp } = require('drizzle-orm/pg-core');
 
-export const users = pgTable('users', {
+const users = pgTable('users', {
 
     id: serial('id').primaryKey(),
 
@@ -14,7 +14,7 @@ export const users = pgTable('users', {
 
 });
 
-export const products = pgTable('products', {
+const products = pgTable('products', {
 
     id: serial('id').primaryKey(),
 
@@ -28,3 +28,10 @@ export const products = pgTable('products', {
 
 });
 
+module.exports = {
+
+    users,
+
+    products
+
+}
