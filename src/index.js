@@ -10,7 +10,7 @@ const PORT = 3000;
 
 app.use(bodyParser.json());
 app.use(logRequest);
-// app.use(productRoutes);
+app.use(productRoutes);
 app.use(userRouter);
 // app.use(errorResponder);
 
